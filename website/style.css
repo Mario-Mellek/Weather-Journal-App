@@ -1,0 +1,215 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-size: cover;
+  background-attachment: fixed;
+    background-image: url("Sun.png");
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+#app{
+    display: grid;
+    grid-auto-rows: minmax(150px, auto);
+    color: whitesmoke;
+    justify-content: center;
+    grid-gap: 3em;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    animation: bounce 800ms ease-in-out;
+}
+/*
+https://www.tutorialspoint.com/css/css_animation_bounce.htm#:~:text=Description,a%20surface%20after%20hitting%20it.
+*/
+@keyframes bounce { 
+  0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
+  40% {transform: translateY(50px);} 
+  60% {transform: translateY(30px);} 
+}
+
+
+.headline {
+width: fit-content;
+}
+
+/*  Basic Styling To Override Default For Basic HTML Elements */
+label{
+    display:block;
+    font-size: 27px;
+}
+
+input{
+    display:block;
+    height: 60px;
+    width: 320px;
+    background:#000000;
+    color: #ffffff;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    border: none;
+    border-radius: 10px;
+}
+
+/*https://uibuttons.vercel.app/components/9*/
+.btn-9,
+.btn-9 *,
+.btn-9 :after,
+.btn-9 :before,
+.btn-9:after,
+.btn-9:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+.btn-9 {
+  display: grid;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-color: #000;
+  background-image: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 100%;
+  font-weight: 900;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+.btn-9:disabled {
+  cursor: default;
+}
+.btn-9:-moz-focusring {
+  outline: auto;
+}
+.btn-9 svg {
+  display: block;
+}
+.btn-9 [hidden] {
+  display: none;
+}
+.btn-9 {
+  border-radius: 99rem;
+  border-width: 2px;
+  overflow: hidden;
+  padding: 0.8rem 3rem;
+  position: absolute;
+}
+.btn-9 span {
+  mix-blend-mode: difference;
+}
+.btn-9:after,
+.btn-9:before {
+  --tilt: 1.2rem;
+  background: whitesmoke;
+  -webkit-clip-path: polygon(
+    0 0,
+    calc(100% - var(--tilt)) 0,
+    100% 50%,
+    calc(100% - var(--tilt)) 100%,
+    0 100%
+  );
+  clip-path: polygon(
+    0 0,
+    calc(100% - var(--tilt)) 0,
+    100% 50%,
+    calc(100% - var(--tilt)) 100%,
+    0 100%
+  );
+  content: "Generate";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  left: calc(-100% - var(--tilt));
+  position: absolute;
+  top: 0;
+  transform: translateX(var(--progress, 0));
+  transition: transform 0.5s ease;
+  width: calc(100% + var(--tilt));
+}
+.btn-9:hover:before {
+  --progress: 100%;
+  color: #000000;
+}
+
+
+
+h1{
+    font-size: 36px;
+    text-shadow: 10px 10px 40px whitesmoke;
+}
+
+h3{
+  text-shadow: 10px 10px 40px whitesmoke;
+}
+
+textarea{
+    background:#000000;
+    color: #ffffff;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    border-radius: 10px;
+}
+/* Reset style for HTML element on active to have no border*/
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+/* Style for Placeholder Text*/
+::placeholder { /* Firefox, Chrome, Opera */ 
+    color: #ffffff; 
+    font-family: 'Oswald', sans-serif;
+
+} 
+  
+:-ms-input-placeholder { /* Internet Explorer 10-11 */ 
+    color: #ffffff; 
+    font-family: 'Oswald', sans-serif;
+
+} 
+  
+::-ms-input-placeholder { /* Microsoft Edge */ 
+    color: #ffffff; 
+    font-family: 'Oswald', sans-serif;
+
+} 
+
+        
+.card {
+display: flex;
+align-items: center;
+justify-content:space-evenly;
+border-radius: 50px;
+color: whitesmoke;
+width: 500px;
+height: 200px;
+background: rgba(0, 0, 0, 0.5);
+opacity: 0;
+}
+        
+#temp{
+align-items: center;
+justify-content: center;
+}
+
+#feeling{
+color: #a3acc1;
+font-size: 20px;
+}
+#date{
+  font-size: 20px;
+  color: #a3acc1;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
